@@ -32,12 +32,16 @@ function promptUser() {
                 name: 'logoColor',
             },
         ])
-        .then(answers => {
-            console.log("logo.svg", answers);
+        .then((response) => {
+            createLogo(response);
         })
+        .catch(err => {
+            console.log(err)
+        });
 }
 
 promptUser();
+
 
 
     // need to export answers to shape.js and finally to logo.js
