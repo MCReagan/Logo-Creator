@@ -8,6 +8,12 @@ function promptUser() {
                 type: 'input',
                 message: 'Enter one to three characters for your Logo.',
                 name: 'name',
+                validate: (answer) => {
+                    if (answer.length > 3 || answer.length == 0) {
+                        return console.log("\nYou must enter between 1 and 3 letters.\n")
+                    }
+                    return true;
+                }
             },
             {
                 type: 'input',
@@ -27,10 +33,7 @@ function promptUser() {
             },
         ])
         .then(answers => {
-            if (answers.name.length > 3 || answers.name.length === 0) {
-                console.log("You must enter between 1 and 3 letters.")
-                promptUser();
-            }
+            console.log("logo.svg", answers);
         })
 }
 
