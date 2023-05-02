@@ -1,12 +1,12 @@
 
 <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" width="300" height="200">
-<circle cx="50" cy="50" r="40" fill="purple" />
+<polygon points="50,0 0,100 100,100" fill="blue" />
 <text
-    x="50%"
-    y="50%"
+    x="53"
+    y="70"
     text-anchor="middle"
-    fill="blue"
-    font-size="2.3rem" letter-spacing="2" dy=".3em"
-    font-family="monospace">iea
+    fill="yellow"
+    font-size="1.9rem" letter-spacing="1" dy=".3em"
+    font-family="monospace">JKL
 </text>
 </svg>
