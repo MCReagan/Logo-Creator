@@ -1,5 +1,7 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
+const isCss3Color = require("is-css3-color");
+const { Triangle, Square, Circle } = require("./lib/shapes");
 
 function promptUser() {
     inquirer
@@ -17,8 +19,14 @@ function promptUser() {
             },
             {
                 type: 'input',
-                message: 'Enter color keyword or a hexadecimal number for your Logo TEXT.',
+                message: 'Enter color keyword or a hexadecimal number for your Logo TEXT.  Use lowercase only.',
                 name: 'textColor',
+                validate: (answer) => {
+                    if (!isCss3Color(answer)) {
+                        return console.log("\nYou must enter a css color keyword or hex code");
+                    }
+                    return true;
+                }
             },
             {
                 type: 'list',
@@ -28,20 +36,25 @@ function promptUser() {
             },
             {
                 type: 'input',
-                message: 'Enter color keyword or a hexadecimal number for your Logo BACKGROUND.',
+                message: 'Enter color keyword or a hexadecimal number for your Logo BACKGROUND. Use lowercase only.',
                 name: 'logoColor',
+                validate: (answer) => {
+                    if (!isCss3Color(answer)) {
+                        return console.log(answer,"\nYou must enter a css color keyword or hex code");
+                    }
+                    return true;
+                }
             },
         ])
         .then((response) => {
-            createLogo(response);
+            console.log(response);            
         })
         .catch(err => {
             console.log(err)
         });
 }
 
+
 promptUser();
 
-
-
-    // need to export answers to shape.js and finally to logo.js
+// need to export answers to shape.js and finally to logo.js

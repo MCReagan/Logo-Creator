@@ -15,6 +15,7 @@
   "license": "ISC",
   "dependencies": {
     "inquirer": "^8.2.5",
+    "is-css3-color": "^1.0.0",
     "jest": "^24.9.0"
   }
 }
