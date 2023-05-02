@@ -1,12 +1,12 @@
 
 <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" width="300" height="200">
-<polygon points="50,0 0,100 100,100" fill="blue" />
+<circle cx="50" cy="50" r="40" fill="yellow" />
 <text
-    x="53"
-    y="70"
+    x="50"
+    y="50"
     text-anchor="middle"
-    fill="yellow"
-    font-size="1.9rem" letter-spacing="1" dy=".3em"
-    font-family="monospace">JKL
+    fill="blue"
+    font-size="2.3rem" letter-spacing="1" dy=".3em"
+    font-family="monospace">OOO
 </text>
 </svg>
