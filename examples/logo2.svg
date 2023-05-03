@@ -1,0 +1,12 @@
+
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" width="300" height="200">
+<polygon points="50,0 0,100 100,100" fill="yellow" />
+<text
+    x="50"
+    y="70"
+    text-anchor="middle"
+    fill="black"
+    font-size="1.9rem" letter-spacing="1" dy=".3em"
+    font-family="monospace">JK
+</text>
+</svg>
